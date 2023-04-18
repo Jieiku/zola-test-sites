@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ config.extra.language_code | default(value='en-US') }}">
+<head>
+  <meta name="robots" content="noindex">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+</head>
+<body>
+  <div><a href="/">Home</a></div>
+  {%- block content %}
+  {%- endblock content %}
+</body>
+</html>

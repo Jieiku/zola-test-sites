@@ -1,0 +1,16 @@
+# do NOT include a trailing slash on the base URL for web urls
+base_url = "https://zolatest.netlify.app"
+title = "Testing"
+description = "Testing JS Templates."
+default_language = "en"
+compile_sass = false
+minify_html = false
+generate_feed = false
+output_dir = "public"
+build_search_index = true
+[search]                # Options specific to elasticlunr search.
+index_format = "elasticlunr_json"
+include_title = true        # include title of page/section in index
+include_description = true # include description of page/section in index
+include_content = true      # include rendered content of page/section in index
+# truncate_content_length = 100 # Truncate at nth character. May be useful if index is getting too large.
