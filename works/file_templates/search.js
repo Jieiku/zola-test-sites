@@ -129,7 +129,7 @@ function formatSearchResultItem(item, terms) {
 }
 
 function initSearch() {
-  var fetchURL = 'https://zolatest.netlify.app/search_index.en.json?h=d99495eb9ec73a0bbda7';
+  var fetchURL = '{{ get_url(path="search_index." ~ lang ~ ".json", trailing_slash=false, cachebust=true) | safe }}';
   var $searchInput = document.getElementById("search");
   var $searchResults = document.querySelector(".search-results");
   var $searchResultsItems = document.querySelector(".search-results__items");

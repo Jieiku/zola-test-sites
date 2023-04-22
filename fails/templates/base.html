@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ config.extra.language_code | default(value='en-US') }}">
+<head>
+  <meta name="robots" content="noindex">
+  <script defer src="{{ get_url(path='elasticlunr.min.js', trailing_slash=false, cachebust=true) | safe }}"{%- if config.extra.integrity | default(value=true) %} integrity="sha384-{{ get_hash(path='elasticlunr.min.js', sha_type=384, base64=true) | safe }}"{%- endif %}></script>
+  <script defer src="{{ get_url(path='search.js', trailing_slash=false, cachebust=true) | safe }}"{%- if config.extra.integrity | default(value=true) %} integrity="sha384-{{ get_hash(path='search.js', sha_type=384, base64=true) | safe }}"{%- endif %}></script>
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+</head>
+<body>
+  <div><a href="/">Home</a></div>
+  {%- block content %}
+  {%- endblock content %}
+</body>
+</html>
